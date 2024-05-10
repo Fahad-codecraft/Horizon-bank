@@ -55,7 +55,6 @@ export const createDwollaCustomer = async (
   newCustomer: NewDwollaCustomerParams
 ) => {
   try {
-    console.log(newCustomer)
     return await dwollaClient
       .post("customers", newCustomer)
       .then((res) => res.headers.get("location"));
